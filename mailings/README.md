@@ -2,6 +2,20 @@
 
 Esta carpeta contiene los templates HTML para campañas de email marketing.
 
+## Configuración
+
+Antes de usar los templates, debes reemplazar la variable `{{DOMAIN_URL}}` con tu dominio de producción:
+
+```bash
+# Ejemplo para producción:
+sed 's|{{DOMAIN_URL}}|https://bosisioflexo.vercel.app|g' invitacion-evento.html > invitacion-evento-prod.html
+
+# Ejemplo para desarrollo local:
+sed 's|{{DOMAIN_URL}}|http://localhost:3000|g' invitacion-evento.html > invitacion-evento-local.html
+```
+
+O puedes hacerlo manualmente reemplazando `{{DOMAIN_URL}}` con tu URL.
+
 ## Templates Disponibles
 
 ### 1. Invitación a Evento (`invitacion-evento.html`)
@@ -17,7 +31,8 @@ Template diseñado para invitaciones a eventos corporativos, lanzamientos de pro
 
 **Cómo usar:**
 1. Abre el archivo en tu navegador para previsualizarlo
-2. Personaliza los siguientes campos:
+2. Reemplaza `{{DOMAIN_URL}}` con tu dominio (ej: https://bosisioflexo.vercel.app)
+3. Personaliza los siguientes campos:
    - Fecha del evento
    - Hora del evento
    - Ubicación
