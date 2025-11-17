@@ -38,6 +38,20 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_AR",
     siteName: "Bosisio Flexo S.A.",
+    images: [
+      {
+        url: '/assets/meta-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Bosisio Flexo - Soluciones en Packaging y Fotopolímeros',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Bosisio Flexo – Soluciones integrales de packaging y fotopolímeros digitales",
+    description: "Proveedor líder de packaging, preprensa y fotopolímeros digitales Full HD. Tecnología LED avanzada, calidad industrial y soporte técnico especializado.",
+    images: ['/assets/meta-image.png'],
   },
 };
 
