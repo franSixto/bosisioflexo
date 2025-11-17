@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function NotFound() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-light">
@@ -7,9 +9,9 @@ export default function NotFound() {
         <p className="text-xl text-gray-600 mb-8">
           Lo sentimos, la página que buscas no existe.
         </p>
-        <a href="/" className="btn-primary">
+        <Link href="/" className="btn-primary">
           Volver al inicio
-        </a>
+        </Link>
       </div>
     </div>
   );
