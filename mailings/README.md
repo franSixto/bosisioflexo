@@ -4,7 +4,21 @@ Esta carpeta contiene los templates HTML para campañas de email marketing.
 
 ## Configuración
 
-Antes de usar los templates, debes reemplazar la variable `{{DOMAIN_URL}}` con tu dominio de producción:
+### Variables de Entorno
+
+El template usa la variable `{{DOMAIN_URL}}` que debe ser reemplazada con tu dominio.
+
+**Opción 1: Usando el script automático (Recomendado)**
+
+```bash
+# Asegúrate de tener configurado NEXT_PUBLIC_DOMAIN_URL en .env.local
+npm run generate-email
+
+# O especifica el template y nombre de salida:
+npm run generate-email invitacion-evento invitacion-evento-prod
+```
+
+**Opción 2: Reemplazo manual con sed**
 
 ```bash
 # Ejemplo para producción:
@@ -30,9 +44,10 @@ Template diseñado para invitaciones a eventos corporativos, lanzamientos de pro
 - Footer con información de contacto y redes sociales
 
 **Cómo usar:**
-1. Abre el archivo en tu navegador para previsualizarlo
-2. Reemplaza `{{DOMAIN_URL}}` con tu dominio (ej: https://bosisioflexo.vercel.app)
-3. Personaliza los siguientes campos:
+1. Configura `NEXT_PUBLIC_DOMAIN_URL` en tu archivo `.env.local`
+2. Ejecuta `npm run generate-email` para generar el template con las URLs correctas
+3. El archivo procesado estará en `public/invitacion-evento-processed.html`
+4. Personaliza los siguientes campos en el template generado:
    - Fecha del evento
    - Hora del evento
    - Ubicación
