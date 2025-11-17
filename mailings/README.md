@@ -37,7 +37,7 @@ Template diseñado para invitaciones a eventos corporativos, lanzamientos de pro
 
 **Características:**
 - Diseño responsive compatible con todos los clientes de email
-- Colores corporativos de Bosisio Flexo (#6c3177, #b8860b)
+- Colores corporativos de Bosisio Flexo (#6c3177, #c0c0c0)
 - Sección de detalles del evento destacada
 - Botón CTA prominente para confirmación
 - Lista de beneficios incluidos

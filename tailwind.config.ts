@@ -17,9 +17,9 @@ export default {
           glow: '#7d4a87',
         },
         accent: {
-          DEFAULT: '#d4a574', // Dorado/cobre como acento
-          light: '#e6c299',
-          dark: '#b8895f',
+          DEFAULT: '#c0c0c0', // Plata/silver como acento
+          light: '#d8d8d8',
+          dark: '#a8a8a8',
         },
         black: {
           DEFAULT: '#0A0A0A',
@@ -38,7 +38,7 @@ export default {
         'glow': '0 0 15px rgba(108, 49, 119, 0.5)',
         'glow-lg': '0 0 30px rgba(108, 49, 119, 0.6)',
         'glow-xl': '0 0 45px rgba(108, 49, 119, 0.7)',
-        'glow-accent': '0 0 20px rgba(212, 165, 116, 0.4)',
+        'glow-accent': '0 0 20px rgba(192, 192, 192, 0.4)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
