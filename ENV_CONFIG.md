@@ -23,26 +23,37 @@ Dominio base de la aplicación sin trailing slash.
 cp .env.example .env.local
 ```
 
-2. Edita `.env.local` con tus valores locales
+2. Edita `.env.local` con tu dominio:
+   - Para desarrollo local: `http://localhost:3000`
+   - Para testing de producción: tu dominio real
+
+3. Regenera los templates de email después de cambiar el dominio:
+```bash
+npm run generate-email
+```
 
 ## Configuración para Producción (Vercel)
 
 1. Ve al dashboard de tu proyecto en Vercel
 2. Settings → Environment Variables
-3. Agrega las siguientes variables:
+3. Agrega las siguientes variables para **Production**, **Preview** y **Development**:
 
 | Variable | Valor |
 |----------|-------|
-| `NEXT_PUBLIC_DOMAIN_URL` | `https://tudominio.vercel.app` |
+| `NEXT_PUBLIC_DOMAIN_URL` | `https://bosisioflexo.vercel.app` (o tu dominio custom) |
 
-4. Redeploy el proyecto para aplicar los cambios
+4. **IMPORTANTE**: Después de agregar las variables, debes hacer un nuevo deploy:
+   - Opción 1: Redeploy desde el dashboard de Vercel
+   - Opción 2: Push un cambio al repositorio
+
+⚠️ **Nota**: Los archivos HTML en `public/` son estáticos y deben regenerarse cuando cambies el dominio.
 
 ## Uso en Templates de Email
 
 Para generar templates con las URLs correctas:
 
 ```bash
-# Usa el dominio de .env.local
+# Regenera todos los templates con el dominio de .env.local
 npm run generate-email
 
 # Especifica template y nombre de salida
